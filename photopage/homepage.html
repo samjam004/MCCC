@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        Cats
+    </title>
+  
+    <!--Style CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+  
+<body>
+    <h1>National Geographic</h1>
+    <h6>Exotic Cats</h6>
+  
+    <div class="myProducts">
+        <div class="myProducts-gallery">
+            <img src=
+"images/sandcat.jpeg"
+                alt="click here" 
+                onclick="myImageFunction(this)">
+            <img src=
+"images/lynx.jpeg"
+                alt="click here"
+                onclick="myImageFunction(this)">
+            <img src=
+"images/eurowildcat.jpeg"
+                alt="click here" 
+                onclick="myImageFunction(this)">
+            <img src=
+"images/snowleopard.webp"
+                alt="click here" 
+                onclick="myImageFunction(this)">
+        </div>
+        <div class="image-container">
+            <img id="img-Box" src=
+"images/tiger.jpeg"
+                alt="click here">
+        </div>
+    </div>
+  
+    <script>
+        function myImageFunction(productSmallImg) {
+            var productFullImg = document.getElementById("img-Box");
+            productFullImg.src = productSmallImg.src;
+        }
+    </script>
+</body>
+  
+</html>
