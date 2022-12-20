@@ -1,231 +1,175 @@
 <!DOCTYPE html>
-<html>
-  
-<head>
-    <title>
-        Sam's Portfolio
-    </title>
-     
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-        <style>
-	
-            /* wildcard styling */
-            * {
-                box-sizing: border-box;
-            }
-            
-            /* padding for whole body */
-            body {
-                padding: 15px;
-                background-color:rgb(13, 17, 23);
-            }
-            
-            /* styling body */
-            .container {
-                max-width: 1200px;
-                margin: auto;
-            }
-            
-            h1 {
-                color: white;
-                text-align: center;
-            }
-            
-            /* anchor tag decoration */
-            a {
-                text-decoration: none;
-                color: #5673C8;
-            }
-            
-            a:hover {
-                color: lightblue;
-            }
-            
-            /* paragraph tag decoration */
-            p {
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 4;
-                overflow: hidden;
-        
-            }
-            
-            /* row and column decoration */
-            .row {
-                margin: 0px -18px;
-                padding: 8px;
-            }
-            
-            .row > .column {
-                padding: 6px;
-            }
-            
-            .column {
-                float: left;
-                width: 25%;
-            }
-            
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-            
-            /* content decoration */
-            .content {
-                padding: 10px;
-                color: rgb(201, 209, 217);
-                border: 1px solid gray;
-                background-color: rgb(33,38,45);
-                text-decoration: none;
-            }
-            
-            /* window size 850 width set */
-            @media screen and (max-width: 850px) {
-                .column {
-                    width: 50%;
-                }
-            }
-        
-            /* window size 400 width set */
-            @media screen and (max-width: 400px) {
-                .column {
-                    width: 100%;
-                }
-            }
-            #description, #subtitle {
-                text-align: center;
-                color: rgb(201, 209, 217);
-            }
-            h3 {
-                text-align: center;
-                color: rgb(201, 209, 217);
-            }
-            
-            
-        </style>
-</head>
- 
-<body>
-      
-    <!-- title and tag -->
-    <div class="container">
-        <h1>My Portfolio</h1>
-        <h3 id="description">A Small Collection of My Web-Development Journey During the Fall of 2022</h3>
-        <hr>
-  
-        <!-- Content of the body-->
-        <h2 id="subtitle">Projects</h2>
-        <div class="row">
-            <div class="column">
-                <div class="content">
-                    <img src=
-"assets/joji.png"
-                        alt="" style="width:100%">
-                    <h3>
-                        <a href="event/joji.html">Event</a>
-                    </h3>
-                     
- 
- 
- 
-<p>
-                        The goal of this project was to create
-                        a visually pleasing event homepage
-                        using HTML and CSS. It also included
-                        a JS script that played a music sample. 
-                    </p>
- 
- 
- 
- 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta http-equiv"X-UA-compatible" content-"IE=edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Portfolio v.3</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/7cc6a05b45.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+         <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="assets/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Aspiring Software Developer</p>
+                    <h1>Hi, I'm <span>Sam</span><br>from New Jersey</h1>
                 </div>
             </div>
-             
-            <div class="column">
-                <div class="content">
-                    <img src=
-"assets/avorion.png"
-                        alt="" style="width:100%">
-                    <h3>
-                        <a href="parallax/parallax.html">Parralax</a>
-                    </h3>
-                     
-                     
- 
- 
- 
-<p>
-                        Cascading Style Sheets, fondly referred
-                        to as CSS, is a simply designed language
-                        intended to simplify the process of
-                        making web pages presentable. CSS allows
-                        you to apply styles to web pages.
-                    </p>
- 
- 
- 
- 
+         </div>
+         <!---------------about------------------>  
+         <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="assets/pngfind.com-stick-figure-png-3006685.png" width="50px" height="200px">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I'm a 1st year student studying Computer Science at Mercer County CC.<br>
+                        I have limited experience with both front and back end and am excited to learn more!</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX Development</span><br>Designing Website interfaces in HTML, CSS, and Javascript</li>
+                                <li><span>Backend Development</span><br>Limited Java/Python Experience</li>
+                                <li><span>Selenium/Python</span><br>Automating test scripts using Python and Selenium</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>IT Help Desk Technitian</span><br>1st Level IT Support at the University of New Hampshire</li>
+                                <li><span>Panera Bread</span><br>Operated the register and maintained dining room</li>
+                                <li><span>Rockville Climbing Center</span><br>Coached and belayed guests at Rockville</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Robbinsville High School</span><br>2016-2020</li>
+                                <li><span>Mercer County Community College</span><br>Major: Computer Science GPA: TBA</li>
+                                <li><span>Rutgers</span><br>B.S. Computer Science, Transfer planned: 2023-2025</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-             
-            <div class="column">
-                <div class="content">
-                    <img src=
-"assets/docu.png"
-                        alt="" style="width:100%">
-                    <h3>
-                        <a href="documentation/docu.html">Documentation</a>
-                    </h3>
-                     
-                     
- 
- 
- 
-<p>
-                        The term PHP is an acronym for PHP:
-                        Hypertext Preprocessor. PHP is a
-                        server-side scripting language
-                        designed specifically for web
-                        development. PHP can be easily
-                        embedded in HTML files.
-                    </p>
- 
- 
- 
- 
-                </div>
-            </div>
-             
-            <div class="column">
-                <div class="content">
-                    <img src=
-"assets/rest.png"
-                        alt="" style="width:100%">
-                    <h3>
-                        <a href="restaurante/homepage.html">Menu</a>
-                    </h3>
-                     
-                     
- 
- 
- 
-<p>
-                        Javascript was developed by Brendan
-                        Eich in 1995. At first, it was called
-                        LiveScript but was later name to
-                        JavaScript. JavaScript is the muscle
-                        of the structure
-                    </p>
- 
- 
- 
- 
+         </div>
+
+<!-- ---------------------services------------------->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-regular fa-code"></i>  
+                        <h2>Back End</h2>
+                        <p>Python & Java</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-crop"></i>
+                        <h2>UX/UI Design</h2>
+                        <p>HTML, CSS & Javascript</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-robot"></i>
+                        <h2>Web Automation</h2>
+                        <p>Selenium</p>
+                        <a href="#">learn more</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-  
-</html>
+        <!----------------portfolio----------------->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="assets/joji.png" alt="work 1">
+                        <div class="layer">
+                            <h3>Event Page</h3>
+                            <p>A draft for joji's new album tour featuring tour dates and a playable song sample.</p>
+                            <a href="../event/joji.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="assets/avorion.png" alt="work 2">
+                        <div class="layer">
+                            <h3>Parralax Websitep</h3>
+                            <p>A parralax website showcasing one of my favorite space games, Avorion.</p>
+                            <a href="../parallax/parallax.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="assets/restaurant.png" alt="work 3">
+                        <div class="layer">
+                            <h3>Restaurant Website</h3>
+                            <p>A simple restaurant website with menu and contact page.</p>
+                            <a href="../restaurante/homepage.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">See More</a>
+            </div>
+        </div>
+        <!-------------------contact----------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Get In Touch</h1>
+                        <p><i class="fa-sharp fa-solid fa-paper-plane"></i>sam9449jm@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i>609-672-7334</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="assets/Minimalist White and Grey Professional Resume.png" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="text" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" id="" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright"></div>
+
+        </div>
+         <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents) {    
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+         </script>
+    </body>
+</html> 
